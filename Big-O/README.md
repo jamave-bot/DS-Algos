@@ -1,4 +1,4 @@
-# BIG-O
+# BIG O
 - Time complexity/space complexity
 - Bit of math with logarithms
 
@@ -70,5 +70,72 @@ function addUpTo(n){
     - *n* assignments
     - *n* comparisons 
     - It scales with *n*
+
+
+# Big O for real
+Big O Notation is a way to formalize fuzzy counting
+
+How the runtime of an algorithm grows as the input gros
+
+We Say the an algorithm is O(f(n)) if the number of simple operations the computer has to do is eventually less than a constant times f(n) as n increases
+
+- f(n) could be linear 
+- f(n) could be quadratic
+- f(n) could be constant
+- f(n) could be entirely different
+
+```js
+function addUpTo(n){
+    return n * (n+1) / 2;
+}
+```
+- Always 3 operations
+    - **O(1)**
+
+```js
+function addUpTo(n){
+    let total = 0;
+    for (let i =1; i <= n; i++){
+        total += 1;
+    }
+    return total;
+}
+```
+- Number of operations is (eventually) bounded by a multiple of n, say 10n
+    - **O(n)**
+
+```js
+function printAllPairs(n){
+    for (let i = 0; i < n; i++){
+        for (let j = 0; j < n; j++){\
+            console.log(i, j);
+        }
+    }
+}
+```
+- We have a nested loop
+- O(n) inside an O(n)
+    - **O(n)<sup>2</sup>**
+
+
+## Simplifying Big O expressions
+
+These rules are consequences of the rules of Big O
+
+- Constants don't matter
+    - Instead of O(2n), we just say O(n)
+    - Instead of O(500), we say O(1)
+    - Instead of O(13n)<sup>2</sup> we say O(n)<sup>2</sup>
+
+- Smaller Terms don't matter
+    - O(n+10) -> O(n)
+    - O(1000n + 50) -> O(n)
+    - O(n<sup>2</sup> + 5n + 8) -> O(n)<sup>2</sup>
+
+## Big O Shorthands
+1) Arithmetic operations are constant
+2) Variable assignment is constant
+3) Accessing elements in an array (by index) or object (by key) is constant
+4) In a loop, the complexity is the length of the loop times the complexity of whatever happens in the other loop
 
 
