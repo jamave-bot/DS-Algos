@@ -20,3 +20,18 @@ function addUpTo(n){
     return total;
 }
 ```
+
+```js
+function addUpTo(n){
+    return n * (n+1) / 2;
+}
+```
+
+#### So which one is better?
+- What does better MEAN
+    + Faster?
+    + Less memory intensive?
+    + More readable? 
+- It's the first 2 lmao
+
+
