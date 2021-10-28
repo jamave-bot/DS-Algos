@@ -174,3 +174,40 @@ function double(arr){
 }
 ```
 - O(n) space since the elements in the array are dependent on the incoming arr variable. 
+
+<hr>
+
+## Logarithms
+We've encountered some of the most common complexities: O(1), O(n), O(n^2)
+
+### What's a log again?
+
+Logarithms are the inverse of exponentiation 
+
+log<sub>2</sub>(8) = 3
+
+"log base 2" of 8 is 3
+
+log<sub>2</sub>(value) = exponent -> 2<sup>exponent</sup> = value
+
+We'll omit the 2
+
+log === log<sub>2</sub>
+
+## Logarithm Time Complexity is Great!
+
+O(1) > O(log *n*) > O(n) 
+
+## Who cares?
+
+- Certain searching algorithms has log time complexity
+- Efficient sorting algorithms involve logarithms.
+- Recursion sometimes involves logarithmic space complexity. 
+
+# Recap
+
+- To anaalyze the performance of an algorithm, we use Big O Notation
+- Big O Notation can give us a high level understanding of the time or space complexity of an algorithm
+- Big O Notation doesn't care about precision, only about general trends (linear, quadratic, constant)
+- The time or space complexity depends only on teh algorith, not the hardware used to run the algorithm
+- Big O Notation is everywhere
