@@ -139,3 +139,38 @@ These rules are consequences of the rules of Big O
 4) In a loop, the complexity is the length of the loop times the complexity of whatever happens in the other loop
 
 
+# Space Complexity
+
+## What about the inputs?
+
+- Auxiliary space complexity is the space required by the algorithm, not including space taken up by the inputs. 
+
+## Rules of Thumb
+- Most primitive data types are constant space (bool, numbers, undefined, null)
+- Strings require O(n) space where n is the string length
+- Reference types are generally O(n), where n is the length (for arrays) or the number of keys (for objects)
+
+```js
+function sum(arr){
+    let total = 0;
+    for (let i = 0; i< arr.length; i++){
+        total += arr[i]
+    }
+    return total;
+}
+```
+
+- two numbers: total, i
+- we only have those two variables that exist no matter what. 
+- O(1) space
+
+```js
+function double(arr){
+    let newArr = [];
+    for (let i = 0; i< arr.length; i++){
+        newArr.push(2* arr[i]);
+    }
+    return newArr;
+}
+```
+- O(n) space since the elements in the array are dependent on the incoming arr variable. 
