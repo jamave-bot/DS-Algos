@@ -1,5 +1,5 @@
 # DS-Algos
-#### Notes from Colt Steele's Udemy Data Structures and Algorithms course.
+#### Notes from Colt Steele's JavaScript Algorithms and Data Structures Masterclass on Udemy
 
 # Contents
 - ## [Big O](https://github.com/jamave-bot/DS-Algos/tree/main/00-Big-O)
