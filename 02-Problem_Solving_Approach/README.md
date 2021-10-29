@@ -246,6 +246,18 @@ helper function to get charcode:
 ```
 <hr>
 
+# Recap
 
+- Understand the Problem
+    - Clarify the problem, ask the interviewer questions
+- Explore concrete examples
+    - Various inputs, handling errors, invalid inputs
+- Break it Down
+    - Could lay out psuedo code or just think about the steps you're going to go through, don't pigeonhole yourself into one solution
+- Solve/Simplify
+    - If you can't solve it right away, solve a simpler problem. 
+- Look Back and Refactor
+    - Probably the most important for improving as a developer.
+    - Look back and see what you can improve on/learn 
 
 
