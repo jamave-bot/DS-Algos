@@ -111,3 +111,50 @@ function charCount(str){
 }
 ```
 
+<hr>
+
+# Solve or Simplify
+
+If you can't solve the problem,
+
+## solve a simpler problem!
+
+## Simplify
+- Find the core difficulty in what you're trying to do 
+- Temporarily ignore that difficulty
+- Write a simplified solution 
+- Then incorporate that difficulty back in
+
+back to the problem
+
+e.g. **Write a function which takes in a string and returns counts of each character in the string** (the same one as before)
+
+```js
+function charCount(str){
+    // make object to return it at end
+    let result = {};
+    // loop over string, for each character....
+    for (let i = 0; i< str.length; i++){
+        let char = str[i];
+            // if the char is a number/letter AND if the char is a key in object, add one to count
+        if (result[char] > 0){
+            result[char]++;
+        }
+            // if the char is a number/letter AND if the char is not in object, add it and set value to 1
+        else{
+            result[char] = 1;
+        }
+    }
+        // if the character is something else, (space,period, etc..) don't do anything
+    // return the object at the end
+    return result
+}
+```
+So far, we're not checking if the input has all alphanumeric/lowercase characters, but we're 90% to the desired solution.
+
+To tell if a character IS alphanumeric, there are a lot of options. 
+- We could have an array of the characters we want
+- We could use a regular expression (regex)
+- We could use the character codes ASCII
+
+To implement these, we wouldn't have to change the code we've already written much. 
