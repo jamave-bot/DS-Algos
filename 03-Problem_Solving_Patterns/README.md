@@ -178,4 +178,102 @@ function sumZero(arr){
 }
 ```
 
+This would give a **Time Complexity of O(n)**
+
 <hr>
+
+> Implement a function called countUniqueValues, which accepts a sorted array. There can be negative numbers in the array, but it will always be sorted. 
+
+```js
+countUniqueValues([1,1,1,1,1,2]) // 2
+countUniqueValues([1,2,3,4,4,4,7,7,12,12,13]) // 7 
+countUniqueValues([]) //0
+countUniqueValues([-2, -1, -1, 0, 1]) // 4
+```
+
+(My solution in index.js)
+
+## Colt's Solution: 
+
+```js
+function countUniqueValues(arr){
+    if(arr.length === 0) return 0;
+    var i = 0;
+    for(var j = 1; j < arr.length; j++){
+        if(arr[i] !== arr[j]){
+            i++;
+            arr[i] = arr[j]
+        }
+    }
+    return i + 1;
+}
+```
+<hr>
+
+## Sliding Window Pattern
+
+This pattern involves creating a **window** which can either be an array or number from one position to another
+
+Depending on certain conditions, the window either increases or closes (and a new window is created)
+
+Very useful for keeping track of a subset of data in an array/string etc
+
+> e.g. Write a function called maxSubarraySum which accepts an array of integers and a number called **n**. the function should calculate the maximum sum of **n** consecutive elements in the array. 
+
+```js
+maxSubarraySum([1,2,5,2,8,1,5], 2) // 10
+maxSubarraySum([1,2,5,2,8,1,5], 4) // 17
+maxSubarraySum([4,2,1,6], 1) // 6
+maxSubarraySum([4,2,1,6,2], 4) // 13
+maxSubarraySum([], 4) // null
+```
+
+## Naive Solution: 
+
+```js
+function maxSubarraySum(arr, num) {
+  if ( num > arr.length){
+    return null;
+  }
+  var max = -Infinity;
+  for (let i = 0; i < arr.length - num + 1; i ++){
+    temp = 0;
+    for (let j = 0; j < num; j++){
+      temp += arr[i + j];
+    }
+    if (temp > max) {
+      max = temp;
+    }
+  }
+  return max;
+}
+```
+
+This has a time complexity of O(n<sup>2</sup>)
+
+## Refactored Solution: 
+
+```js
+function maxSubarraySum(arr, num){
+  let maxSum = 0;
+  let tempSum = 0;
+  if (arr.length < num) return null;
+  for (let i = 0; i < num; i++) {
+    maxSum += arr[i];
+  }
+  tempSum = maxSum;
+  for (let i = num; i < arr.length; i++) {
+    tempSum = tempSum - arr[i - num] + arr[i]; // basically, we're subtracting the value at the previous index(arr[i - num]) while adding the value from the next index (arr[i])
+    maxSum = Math.max(maxSum, tempSum);
+  }
+  return maxSum;
+}
+```
+Time complexity of O(n) (linear complexity)
+
+<hr>
+
+## Divide and Conquer Pattern
+
+
+
