@@ -29,7 +29,7 @@ function validAnagram(str1, str2){
 // console.log(validAnagram("anagram","nagaram")) // true
 // console.log(validAnagram("rat","car")) // false
 
-
+// MY Solution
 const countUniqueValues = (arr) =>{
     if (arr.length === 0){
         return 0
@@ -48,3 +48,20 @@ console.log(countUniqueValues([1,1,1,1,1,2])) // 2
 console.log(countUniqueValues([1,2,3,4,4,4,7,7,12,12,13])) // 7 
 console.log(countUniqueValues([])) // 0
 console.log(countUniqueValues([-2, -1, -1, 0, 1])) // 4
+
+
+// Leon's Solution (not mutating the array)
+// function countUniqueValues(arr){
+//     let count = 1;
+//     let diff = 0;
+//     if (arr.length === 0){
+//         return 0
+//     }
+//     for (let i = 1; i < arr.length; i++){
+//         if (arr[i] - arr[0] > diff){
+//             count++
+//             diff = (arr[i] - arr[0])
+//         }
+//     }
+//     return count
+// }
