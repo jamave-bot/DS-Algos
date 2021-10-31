@@ -51,6 +51,7 @@ console.log(countUniqueValues([-2, -1, -1, 0, 1])) // 4
 
 
 // Leon's Solution (not mutating the array)
+
 // function countUniqueValues(arr){
 //     let count = 1;
 //     let diff = 0;
