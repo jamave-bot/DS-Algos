@@ -42,7 +42,7 @@ function sameFrequency(num1, num2){
 
 <hr>
 
-## Frequency Counter/ Multiple Pointers 
+## Frequency Counter/ Multiple Pointers - areThereDuplicates
 
 > Implement a function called, **areThereDuplicates** which accepts a **variable number of arguments**, and checks whether there are any duplicates among the arguments passed in. You can solve this using the frequency counter pattern OR the multiple pointers pattern.
 
@@ -101,4 +101,19 @@ function areThereDuplicates(...args) {
 function areThereDuplicates() {
   return new Set(arguments).size !== arguments.length; // a set doesn't have duplicate values
 }
+```
+
+<hr>
+
+## Multiple Pointers - averagePair
+
+> Write a function called **averagePair**. Given a sorted array of integers and a target average, determine if there is a pair of values in the array where the average of the pair equals the target average. There may be more than one pair that matches the average target. 
+
+> Time: O(N) Space: O(1)
+
+```js
+averagePair([1,2,3], 2.5) // true
+averagePair([1,3,3,5,6,7,10,12,19], 8) // true
+averagePair([-1, 0, 3, 4,5,6], 4.1) // false
+averagePair([], 4) // false
 ```
