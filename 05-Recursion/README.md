@@ -32,3 +32,81 @@ It's named the call stack
 ## Why do I care?
 - You're used to functions being pushed on the call stack and popped off when they're done
 - When we write recursive functions, we keep pushing new functions onto the call stack
+
+<hr>
+
+## How recursive functions work
+Invoke the **same** function with a different input until you reach your base case
+
+## Base Case
+- The condition when the recursion ends.
+- **This is the most important concept** 
+
+## Two essential parts of a recursive function
+1) Base Case
+1) Different Input
+
+## Our first recursive function
+
+```js
+function countDown(num){
+    if (num <= 0){//base case
+        console.log("Add done!")
+        return;
+    }
+    console.log(num);
+    num--;
+    countDown(num) // recursive call
+}
+```
+<hr>
+
+## Our second recursive function
+
+```js
+function sumRange(num){
+    if (num === 1) return 1; //base case
+    return num + sumRange(num-1); // recursive call
+}
+
+sumRange(3)
+    // return 3 + sumRange(2)
+                    //return 2 + sumRange(1)
+                                    // return 1
+```
+
+<hr>
+
+## Writing Factorial Recursively
+
+> e.g. Write a function to find the value of a factorial recursively
+
+## Non recursive (iterative):
+```js
+function factorial(num){
+    let total = i;
+    for (let i = num; i > 1; i--){
+        total *= i;
+    }
+    return total;
+}
+```
+
+## **Recursive:**
+```js
+function factorial(num){
+    if (num === 1) return 1;
+    return num * factorial(num - 1)
+}
+
+factorial(3)
+// 3 * factorial(2)
+        // 2 * factorial(1)
+                // 1
+```
+
+<hr>
+
+## Common Recursion Pitfalls
+- No base case (or it's wrong)
+- Forgetting to return (or returning the wrong thing)
