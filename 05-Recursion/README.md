@@ -110,3 +110,86 @@ factorial(3)
 ## Common Recursion Pitfalls
 - No base case (or it's wrong)
 - Forgetting to return (or returning the wrong thing)
+- Stack Overflow!!
+
+<hr>
+
+## Helper Method Recursion
+
+```js
+function outer(input){
+    let outerScopedVariable = [];
+
+    function helper(helperInput){
+        // modify the outer scoped variable
+        helper(helperInput--)
+    }
+
+    helper(input)
+
+    return outerScopedVariable
+}
+```
+
+Another example:
+
+```js
+function collectOddValues(arr){
+    
+    let result = [];
+
+    function helper(helperInput){
+        if(helperInput.length === 0) { //base case
+            return;
+        }
+        
+        if(helperInput[0] % 2 !== 0){
+            result.push(helperInput[0]) // pushes into the result array
+        }
+        
+        helper(helperInput.slice(1)) //recursive call
+    }
+    
+    helper(arr)
+
+    return result;
+}
+
+collectOddValues([1,2,3,4,5,6,7,8,9])
+```
+
+## Pure Recursion 
+- Function is 100% self contained
+    - No helper function
+
+```js
+function collectOddValues(arr){
+    let newArr = [];
+    
+    if(arr.length === 0) {
+        return newArr;
+    }
+        
+    if(arr[0] % 2 !== 0){
+        newArr.push(arr[0]);
+    }
+        
+    newArr = newArr.concat(collectOddValues(arr.slice(1)));
+    return newArr;
+}
+
+collectOddValues([1,2,3,4,5])
+//[1].concat(collectOddValues([2,3,4,5]))
+            // [].concat(collectOddValues([3,4,5]))
+                            // [].concat(collectOddValues([4,5]))
+                                        // [].concat(collectOddValues([5]))
+                                                    // [].concat(collectOddValues([]))
+                                                                    // []
+```
+
+## Pure Recursion Tips
+- For arrays, use methods like slice, the spread operator, and concat that make copies of arrays so you do not mutate them.
+- Remember that string are immutable so you will need to use methods like slice, substr, or substring to make copies of strings
+- To make copies of objects use Object.assign, or the spread operator
+
+<hr>
