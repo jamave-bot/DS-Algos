@@ -104,14 +104,23 @@ const averagePair = (arr, avg) =>{
 
 const isSubsequence = (str1, str2) =>{
     let index1 = 0;
-    
-    for (let char of str2){
+    let index2 = 0;
+
+    while (index2 < str2.length){
+        if (str2[index2] === str1[index1]){
+            index1++;
+        }
         
+        if (index1 === str1.length){
+            return true;
+        }
+
+        index2++;
     }
+    return false;
 }
 
-
-isSubsequence('hello', 'hello world') // true
-isSubsequence('sing', 'sting') // true
-isSubsequence('abc', 'abracadabra') // true
-isSubsequence('abc', 'acb') // false (order matters)
+console.log(isSubsequence('hello', 'hello world')) // true
+console.log(isSubsequence('sing', 'sting') ) // true
+console.log(isSubsequence('abc', 'abracadabra')) // true
+console.log(isSubsequence('abc', 'acb')) // false
