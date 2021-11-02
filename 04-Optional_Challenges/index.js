@@ -72,5 +72,5 @@ const areThereDuplicates = (...args) =>{
 
 
 const averagePair = (arr, avg) =>{
-
+    
 }
