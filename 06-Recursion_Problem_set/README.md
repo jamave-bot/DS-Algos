@@ -45,3 +45,63 @@ function factorial(x){
 
 <hr>
 
+## productOfArray
+
+> Write a function called productOfArray which takes in an array of numbers and returns the product of them all. 
+
+```js
+productOfArray([1,2,3]) // 6
+productOfArray([1,2,3,10]) // 60
+```
+
+## Colt's Solution: 
+
+```js
+function productOfArray(arr) {
+    if(arr.length === 0) {
+        return 1;
+    }
+    return arr[0] * productOfArray(arr.slice(1));
+```
+
+<hr>
+
+## Recursive Range
+
+> Write a function called **recursiveRange** which accepts a number and adds up all the numbers from 0 to the number passed to the function.
+
+```js
+recursiveRange(6) // 21
+recursiveRange(10) // 55 
+```
+
+## Colt's Solution: 
+
+```js
+function recursiveRange(x){
+   if (x === 0 ) return 0;
+   return x + recursiveRange(x-1);
+}
+```
+
+<hr>
+
+## fib
+
+> Write a recursive function called **fib** which accepts a number and returns the *n*th number in the Fibonacci sequence. Recall that the Fibonacci sequence is the sequence of whole numbers 1,1,2,3,5,8 ... which starts with1 and 1, and where every number thereafter is squal to the sum of the previous two numbers. 
+
+```js
+fib(4) // 3
+fib(10) // 55
+fib(28) // 317811
+fib(35) // 9227465
+```
+
+## Colt's Solution: 
+
+```js
+function fib(n){
+    if (n <= 2) return 1;
+    return fib(n-1) + fib(n-2);
+}
+```
