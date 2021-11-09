@@ -149,3 +149,14 @@ naiveSearch("lorie loled", "lol")
 ```
 
 <hr>
+
+## Knuth-Morris-Pratt (KMP) Algorithm
+
+[Video Link](https://youtu.be/V5-7GzOfADQ)
+
+**pattern**: "abcdabc"
+**prefix**: "a", "ab", "abc", "abcd", ...
+**suffix**: "c", "bc", "abc", "dabc", ...
+
+Is the beginning part of the pattern showing up anywhere else in the string?
+
