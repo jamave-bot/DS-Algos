@@ -103,3 +103,49 @@ function binarySearch(array, val){
     return -1;
 }
 ```
+
+## What about Big O?
+
+Worst and Average Case - O(logn)
+Best Case - O(1)
+
+<hr>
+
+## Naive String Search
+
+Searching for a substring in a string
+
+e.g.
+Long string: wowomgzomg
+Short string: omg
+
+
+## Psuedocode:
+- Define a function that takes in a long string and a shorter pattern string
+- Loop over the longer string
+- Loop over the shorter string
+- If the characters don't match, break out of the inner loop
+- If the characters do match, keep going
+- If you complete the inner loop and find a mathc, incremement the count of matches
+- Return the count
+
+```js
+function naiveSearch(long, pattern){
+    let count = 0;
+    for (var i = 0; i < long .length; i++){
+        for (let j = 0; j < pattern.length; j++){
+            if(pattern[j] !== long[i+j]){
+                break;
+            }
+            if (j === pattern.length-1){
+                count++;
+            }
+        }
+    }
+    return count;
+}
+
+naiveSearch("lorie loled", "lol")
+```
+
+<hr>
