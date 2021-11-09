@@ -9,3 +9,5 @@
 - [Optional Challenges](https://github.com/jamave-bot/DS-Algos/tree/main/04-Optional_Challenges)
 - [Recursion](https://github.com/jamave-bot/DS-Algos/tree/main/05-Recursion)
 - [Recursion Problem Set](https://github.com/jamave-bot/DS-Algos/tree/main/06-Recursion_Problem_set) 
+- [Bonus Challenging Recursion Problems](https://github.com/jamave-bot/DS-Algos/tree/main/07-Bonus_Challenging_Recursion_Problems)
+- [Searching Algorithms](https://github.com/jamave-bot/DS-Algos/tree/main/08-Searching_Algorithms)
