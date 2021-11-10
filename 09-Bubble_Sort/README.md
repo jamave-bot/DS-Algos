@@ -36,7 +36,8 @@ sort([23,45,6,12,13]) //[6,12,13,23,45]
 ## Telling JS how to sort
 - The built in sort method accepts an optional comparator function 
 - You can use this comparator function to tell JavaScript how you want it to sort
-- The comparator looks at pairs of elements ()
+- The comparator looks at pairs of elements (a and b), determines their sort order based on the return value
+    - If it return a negative number, a should come before b 
 
 e.g.
 
