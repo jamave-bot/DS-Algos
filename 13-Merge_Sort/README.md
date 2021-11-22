@@ -49,3 +49,46 @@ We keep splitting until we get arrays of 0 or 1 elements, then we merge the arra
 - While there are still values we haven't look at...
     - If the value in the first array is smaller than the value in the second array, push the value in the first array into our results and move on to the next value in the first array
     - If the value in the first array is larger than the value in the second array, push the value in the second array into our results and move on to the next value in the second array 
+    - Once we exhause one array, push in all remaining values from the other array
+
+---
+
+## Merging Arrays: Implementation
+
+This is just the helper function to merge 2 already sorted arrays to return 1 sorted array 
+
+```js
+// Merges two already sorted arrays
+function merge(arr1, arr2){
+    let results = [];
+    let i = 0;
+    let j = 0;
+    while(i < arr1.length && j < arr2.length){ // while there are still elements to check
+        if(arr2[j] > arr1[i]){ //checking each element in both arrays
+            results.push(arr1[i]);
+            i++;
+        } else {
+            results.push(arr2[j])
+            j++;
+        }
+    }
+
+    //after the first while loop, if there are still elements in either array, these next while loops push the rest of the elements from the array
+    while(i < arr1.length) {
+        results.push(arr1[i])
+        i++;
+    }
+    while(j < arr2.length) {
+        results.push(arr2[j])
+        j++;
+    }
+    return results;
+}
+
+merge([100,200], [1,2,3,5,6])
+```
+
+---
+
+## Writing Merge Sort Part 1
+
