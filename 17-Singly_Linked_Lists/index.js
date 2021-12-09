@@ -28,6 +28,7 @@ class SinglyLinkedList{
         this.length += 1;
         return this;
     }
+
     pop(){
         if (this.length === 0){
             return undefined
@@ -47,6 +48,14 @@ class SinglyLinkedList{
         this.tail = secondToLast;
         this.length--;
         return current;
+    }
+
+    shift(){
+        if(this.length ===0) return undefined;
+        let head = this.head;
+        this.head = this.head.next;
+        this.length--;
+        return head;
     }
 }
 
