@@ -28,6 +28,26 @@ class SinglyLinkedList{
         this.length += 1;
         return this;
     }
+    pop(){
+        if (this.length === 0){
+            return undefined
+        }
+
+        let current = this.head;
+        let secondToLast = this.head;
+        while (current.next){
+            if (current === this.head){
+                current = current.next
+            } else{
+                secondToLast = current;
+                current = current.next;
+            }
+        }
+        secondToLast.next = null;
+        this.tail = secondToLast;
+        this.length--;
+        return current;
+    }
 }
 
 // var first = new Node("Hi")
@@ -39,3 +59,6 @@ class SinglyLinkedList{
 var list = new SinglyLinkedList()
 list.push("HELLO")
 list.push("GOODBYE")
+list.push("!")
+console.log(list.pop())
+console.log(list)
