@@ -1,5 +1,3 @@
-console.log("hello")
-
 // piece of data - val
 //reference to next node - next
 
@@ -70,6 +68,17 @@ class SinglyLinkedList{
         this.length++;
         return this;
     }
+
+    get(index){
+        if (index < 0 || index >= this.length) return null;
+        let counter = 0;
+        let current = this.head
+        while (counter < index){
+            current = current.next;
+            counter++
+        }
+        return current;
+    }
 }
 
 // var first = new Node("Hi")
@@ -83,5 +92,7 @@ list.push("HELLO")
 list.push("GOODBYE")
 list.push("!")
 // console.log(list.pop())
-console.log(list.unshift("YO!"))
+list.unshift("YO!")
 // console.log(list)
+
+console.log(list.get(3))
