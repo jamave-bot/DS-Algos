@@ -79,6 +79,15 @@ class SinglyLinkedList{
         }
         return current;
     }
+
+    set(value, index){
+        let node = this.get(index);
+        if (node){
+            node.value = value;
+            return true;
+        }
+        return false;
+    }
 }
 
 // var first = new Node("Hi")
