@@ -42,6 +42,7 @@ class DoublyLinkedList{
             this.tail.next = null;
             currentTail.prev = null;
         }
+        this.length--; //forgot to add this
         return currentTail;
     }
 }
