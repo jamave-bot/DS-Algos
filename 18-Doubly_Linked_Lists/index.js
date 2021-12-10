@@ -74,4 +74,31 @@ class DoublyLinkedList{
         this.length++;
         return this;
     }
+
+    get(index){
+        if (index < 0 || index >= this.length) return null
+        if (index <= this.length/2){
+            let checkNode = this.head;
+            for (let i = 0; i < index; i++){
+                checkNode = checkNode.next;
+            }
+            return checkNode;
+        } else{
+            let checkNode = this.tail;
+            for (let i = this.length-1; i > index; i--){
+                checkNode = checkNode.prev;
+            }
+            return checkNode;
+        }
+    }
 }
+
+
+let dll = new DoublyLinkedList();
+dll.push("hello")
+dll.push("there")
+dll.push("general")
+dll.push("kenobi")
+dll.push("!!!")
+// console.log(dll)
+console.log(dll.get(0))
