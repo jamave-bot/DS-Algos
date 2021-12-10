@@ -169,5 +169,17 @@ class DoublyLinkedList {
 Removing a node the **beginning** of the Doubly Linked List
 
 ## Pseudocode
-- 
+- If the length is 0, return undefined
+- Store the current head property in a variable (we'll need to return it at the end)
+- If the length is one
+    - Set the head to null
+    - Set the tail to null
+- Update the head to be the next of the old head
+- Set the head's prev property to null
+- Set the old head's next to null
+- Decrement the length
+- Return old head
+
+---
+
 
