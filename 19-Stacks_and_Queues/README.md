@@ -140,3 +140,12 @@ Queues exist everywhere!
 ---
 
 ## Creating Queues Using Arrays
+
+```js
+let q = [];
+q.push("FIRST")
+q.push("SECOND")
+q.push("THIRD")
+q.shift() // "FIRST"
+// An array isn't ideal since we'd have to re-index every element after adding or removing anything
+```
