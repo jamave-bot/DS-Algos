@@ -116,3 +116,27 @@ Access - **O(N)**
 ---
 
 # Queues
+
+## Intro
+
+## Objectives
+- Define what a queue is 
+- Understand use cases for a queue
+- Implement operations on a queue data structure
+
+## What is a Queue
+A **FIFO** data structure!
+
+**First In First Out**
+
+## We've Seen This Before
+Queues exist everywhere!
+
+**How have we used them in programming?**
+- Background tasks
+- Uploading resources
+- Printing/Task processing
+
+---
+
+## Creating Queues Using Arrays
