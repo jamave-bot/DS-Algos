@@ -38,6 +38,25 @@ class BinarySearchTree {
         }
     }
 
+    find(value){
+        if (this.root === null) return false;
+
+        let checkNode = this.root;
+        let found = false;
+        while (checkNode && !found){
+            // if (checkNode.value === value) return checkNode;
+            if (value < checkNode.value){
+                checkNode = checkNode.left;
+            } else if (value > checkNode.value){
+                checkNode = checkNode.right;
+            } else {
+                found = true;
+            }
+        }
+        if (!found) return undefined;
+        return current;
+    }
+
 }
 
 var tree = new BinarySearchTree();
