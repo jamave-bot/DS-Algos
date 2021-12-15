@@ -119,4 +119,6 @@ tree.root.left.right = new Node(9);
             - If there is not, add that node as the left property
 - Return the tree at the end
 
+(My attempt in index.js)
+
 --- 
