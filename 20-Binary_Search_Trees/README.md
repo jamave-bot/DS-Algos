@@ -284,3 +284,22 @@ tree.insert(16)
 tree.insert(7)
 ```
 
+---
+
+## BIG O of BST
+- Insertion - **O(logn)**
+- Searching - **O(logn)**
+
+***NOT** guaranteed
+
+![Showing that more layers only adds one step](./6.jpg)
+
+![Showing more steps](./7.jpg)
+
+It is **NOT** guaranteed because there may be some unorthodox BST structures
+
+e.g.
+
+![One sided BST](./8.jpg)
+
+---
