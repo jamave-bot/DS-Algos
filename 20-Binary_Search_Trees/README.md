@@ -47,3 +47,26 @@ Lots of different applications
 
 ---
 
+## Intro to Binary Trees
+
+## Kinds of Trees
+- Trees
+- Binary Trees
+- Binary Search Trees
+
+![Binary Tree](./3.jpg)
+
+- Only ever has 2 children
+
+![Not a Binary Tree](./4.jpg)
+- This has 3 children
+
+![Binary Search Tree or BST](./5.jpg)
+
+## How BSTs (Binary Search Trees) Work
+- Every parent node has at most **two** children
+- Every node to the left of a parent node is **always less** than the parent
+- Every node to the right of a parent node is **always greater** than the parent
+
+---
+
