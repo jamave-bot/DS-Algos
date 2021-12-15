@@ -34,3 +34,16 @@ A data structure that consists of nodes in a **parent/child** relationship
 
 ---
 
+## Uses for Trees
+
+## Trees
+Lots of different applications
+- HTML DOM
+- Network Routing
+- Abstract Syntax Tree 
+- Aritificial Intelligence
+- Folders in Operating Systems
+- Computer File Systems
+
+---
+
