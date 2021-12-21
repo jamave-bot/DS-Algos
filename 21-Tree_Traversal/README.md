@@ -226,3 +226,33 @@ tree.BFS();
         return data;
     }
 ```
+
+---
+
+## When to Use BFS and DFS
+
+>e.g. Say we have a binary tree that has both elements and many layers
+
+![wide bfs](./wideTreeBFS.jpg)
+
+If we were to use BFS here, we would be keeping track of every node, making our space complexity too high. (Time complexity is the same no matter what)
+
+
+VS. if we were to use DFS
+
+![wide dfs](./wideTreeDFS.jpg)
+
+
+![inOrder explanation](./inOrderReasons.jpg)
+
+![preOrder Reasons](./preOrderReasons.jpg)
+
+---
+
+# Recap
+- Trees are non-linear data structures that contain a root and child nodes
+- Binary Trees can have values of any type, but at most two children for each parent
+- Binary Search Trees are a more specific version of binary trees where every node to the left of a parent is less than its value and every node to the right is greater
+- We can search through Trees using BFS and DFS
+
+--- 
