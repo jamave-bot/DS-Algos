@@ -28,3 +28,18 @@ In a **MaxBinaryHeap**, parent nodes are always larger than child nodes. In a **
 - They are also used quite a bit, with **graph traversal** algorithms
 
 ---
+
+## Storing Heaps
+
+**There's an easy way of storing a binary heap... a list/array**
+
+![Binary Heap representation as an array](./heapRep.jpg)
+
+![Finding a child in the array](./heapRepFindingChild.jpg)
+
+![Finding a parent](./heapRepFindingParent.jpg)
+
+---
+
+## Heap: Insert Intro
+
